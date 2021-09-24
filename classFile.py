@@ -111,7 +111,7 @@ class ARIMA_model:
         sdate = test.index[-1]
         for i in range(num):
             d = sdate + timedelta(days=7)
-            lst.append(sd)
+            lst.append(d)
             sdate = d
 
         predictions = pd.DataFrame(pred, columns=['Prediction'])
