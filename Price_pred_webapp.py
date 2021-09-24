@@ -16,11 +16,11 @@ def main():
     ar = ARIMA_model()
     option=st.sidebar.selectbox('Which company would you like to choose?',activities)
     if option=='MARUTI':
-        df_weekly = pd.read_csv('C:\\Users\\Admin\\Desktop\\Summary_Project\\Company Stock Data\\Sample_MARUTI.csv',header=0,index_col='timestamp',parse_dates=True,squeeze=True)
+        df_weekly = pd.read_csv('Sample_MARUTI.csv',header=0,index_col='timestamp',parse_dates=True,squeeze=True)
     elif option=='RELIANCE':
-        df_weekly = pd.read_csv('C:\\Users\\Admin\\Desktop\\Summary_Project\\Company Stock Data\\Sample_RELIANCE.csv',header=0,index_col='timestamp',parse_dates=True,squeeze=True)
+        df_weekly = pd.read_csv('Sample_RELIANCE.csv',header=0,index_col='timestamp',parse_dates=True,squeeze=True)
     elif option=='TIPS':
-        df_weekly = pd.read_csv('C:\\Users\\Admin\\Desktop\\Summary_Project\\Company Stock Data\\Sample_TIPS.csv',header=0,index_col='timestamp',parse_dates=True,squeeze=True)
+        df_weekly = pd.read_csv('Sample_TIPS.csv',header=0,index_col='timestamp',parse_dates=True,squeeze=True)
          
     #st.subheader(option)
     train,test = train_test_split(df_weekly, test_size=0.2, shuffle = False)
